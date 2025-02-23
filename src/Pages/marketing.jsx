@@ -7,7 +7,7 @@ import Pic4 from '../Pictures/Pic_4.jpeg';
 import Pic5 from '../Pictures/Pic_5.jpeg';
 import facebookIcon from "../Pictures/facebook_logo.png";
 import instagramIcon from "../Pictures/insta_logo.png";
-import twitterIcon from "../Pictures/twitter_logo.png";
+import linkedinIcon from "../Pictures/linkedin_logo.png";
 
 function marketing () {
     return(
@@ -23,7 +23,7 @@ function marketing () {
                 <a href="#reviews" className="hover:text-blue-500 font-semibold">Reviews</a>
             </div>
         </nav>
-        <section className="flex text-center p-10 bg-gradient-to-r from-purple-300 to-blue-200 gap-20">
+        <section id="about"className="flex text-center p-10 bg-gradient-to-r from-purple-300 to-blue-200 gap-20">
             <div>
                 <h1 className="text-4xl font-bold">Say Goodbye <span role="img" aria-label="wave">👋</span> to <br /> Grammar Mistakes!</h1>
                 <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
@@ -82,7 +82,7 @@ function marketing () {
             </div>
               
         </section>
-        <section className="p-12 bg-blue-100">
+        <section id="faq" className="p-12 bg-blue-100">
             <h2 className="text-2xl font-bold text-center">Frequently Asked Questions</h2>
             <div className="mt-6 max-w-2xl mx-auto">
                 <details className="mb-4">
@@ -108,18 +108,18 @@ function marketing () {
                 <img src={Logo_img} alt="Logo" className="w-20 h-20" />
             </div>
             <div className="space-x-6">
-                <a href="#t" className="hover:text-white font-semibold">About</a>
-                <a href="#" className="hover:text-white font-semibold">Get Help</a>
+                <a href="#about" className="hover:text-white font-semibold">About</a>
+                <a href="#faq" className="hover:text-white font-semibold">Get Help</a>
             </div>
             <div className="space-x-20 flex">
-                <a href="#" className="text-2xl">
+                <a href="https://www.facebook.com/profile.php?id=61573618317072" className="text-2xl">
                     <img src={facebookIcon} alt="Facebook" className="w-6 h-6" />
                 </a>
-                <a href="#" className="text-2xl">
+                <a href="https://www.instagram.com/vyakarana.site/" className="text-2xl">
                     <img src={instagramIcon} alt="Instagram" className="w-6 h-6" />
                 </a>
-                <a href="#" className="text-2xl">
-                    <img src={twitterIcon} alt="LinkedIn" className="w-6 h-6" />
+                <a href="https://www.linkedin.com/company/105934369/admin/dashboard/" className="text-2xl">
+                    <img src={linkedinIcon} alt="LinkedIn" className="w-6 h-6" />
                 </a>
             </div>
         </footer>
