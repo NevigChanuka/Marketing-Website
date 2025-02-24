@@ -23,104 +23,122 @@ function marketing () {
                 <a href="#reviews" className="hover:text-blue-500 font-semibold">Reviews</a>
             </div>
         </nav>
-        <section id="about"className="flex text-center p-10 bg-gradient-to-r from-purple-300 to-blue-200 gap-20">
-            <div>
-                <h1 className="text-4xl font-bold">Say Goodbye <span role="img" aria-label="wave">👋</span> to <br /> Grammar Mistakes!</h1>
-                <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
-                    Struggling with Sinhala grammar? Our advanced AI-powered tool helps you identify mistakes, understand corrections, and improve your writing effortlessly.
-                </p>
-            </div>
-            <div className="mt-10 flex justify-center">
-                <img src={Pic1} alt="Grammar Checker" className="w-96 rounded-lg shadow-md" />
+        <section className="bg-gradient-to-r from-purple-300 to-blue-200 h-100 flex items-center justify-center px-10 mb-20">
+            <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div className="text-center md:text-left">
+                    <h1 className="text-5xl font-bold text-gray-900 leading-snug font-f1">
+                        Say Goodbye <span role="img" aria-label="wave">👋</span>
+                        <br /> to <span className="text-black">Grammar Mistakes!</span>
+                    </h1>
+                    <p className="mt-4 text-gray-700 text-lg leading-relaxed">
+                        Struggling with Sinhala grammar? Our advanced AI-powered tool helps you identify
+                        mistakes, understand corrections, and improve your writing effortlessly, whether
+                        for school, work, or everyday communication.
+                    </p>
+                </div>
+                <div className="flex justify-center mt-40">
+                    <img
+                        src={Pic1} 
+                        alt="Sinhala Grammar Checker"
+                        className="w-full md:w-[450px] rounded-lg shadow-xl border border-gray-200"
+                    />
+                </div>
             </div>
         </section>
         <section id="features" className="p-12 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-6 shadow-md rounded-lg">
-                <h2 className="text-xl font-bold">Correcting Grammatical Errors</h2>
+                <h2 className="text-xl font-bold font-f2">Correcting Grammatical Errors</h2>
                 <p className="mt-2 text-gray-600">
                     Automatically detects and corrects grammatical mistakes in Sinhala text. Highlights errors and provides suggestions for improvement.
                 </p>
                 <img src={Pic2} alt="Correction" className="mt-4 ml- w-32 " />
             </div>
             <div className="bg-white p-6 shadow-md rounded-lg">
-                <h2 className="text-xl font-bold">Suggest Similar Words</h2>
+                <h2 className="text-xl font-bold font-f2">Suggest Similar Words</h2>
                 <p className="mt-2 text-gray-600">
                     Provides alternative words with similar meanings to enhance vocabulary. Helps refine writing by suggesting more suitable words.
                 </p>
                 <img src={Pic3} alt="Suggestion" className="mt-4 w-32" />
             </div>
         </section>
-        <section className="bg-gray-100 min-h-screen p-12">
-            <h2 className="text-3xl font-bold text-center text-purple-700 mb-8">How It Works?</h2>
-            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        
-                <div>
-                    <h3 className="text-xl font-semibold">1. Enter your text</h3>
-                    <p className="text-gray-700">Type or paste your Sinhala text into the input box.</p>
+        <section className="p-12">
+            <h2 className="text-4xl font-bold text-purple-600 text-center">How It Works?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 m-10 ml-20 mr-20 ">
+                <div className="justify-items-center ">
+                    <h3 className="font-semibold justify-start">1. Enter your text</h3>
+                    <p>Type or paste your Sinhala text into the input box.</p>
+                    <img src={Pic4} alt="Step 1" className="mt-4 max-w-90 rounded-lg border-4 border-gray-400" />
+                </div >
+                <div className="justify-items-center ">     
+                    <h3 className="font-semibold">2. AI checks your writing</h3>
+                    <p>Our tool analyzes grammatical errors and suggests a correct version.</p>
+                    <img src={Pic1} alt="Step 2" className="mt-4 max-w-90 rounded-lg border-4 border-gray-400" />
                 </div>
-                <img src={Pic1} alt="Step 1" className="rounded-lg shadow-md" />
-        
-                <img src={Pic5} alt="Step 2" className="rounded-lg shadow-md" />
-                <div>
-                    <h3 className="text-xl font-semibold">2. AI checks your writing</h3>
-                    <p className="text-gray-700">Our tool analyzes grammatical errors and suggests a correct version.</p>
+                <div className="justify-items-center ">
+                    <h3 className="font-semibold">3. Get similar word suggestions</h3>
+                    <p>For highlighted words, we provide alternative word choices to refine your writing.</p>
+                    <img src={Pic5} alt="Step 3" className="mt-4 max-w-90 rounded-lg border-4 border-gray-400" />
                 </div>
-        
-                <div>
-                    <h3 className="text-xl font-semibold">3. Get similar word suggestions</h3>
-                    <p className="text-gray-700">For highlighted words, we provide alternative word choices to refine your writing.</p>
-                </div>
-                <img src={Pic4} alt="Step 3" className="rounded-lg shadow-md" />
-        
-                <div className="text-center mt-8">
-                    <div className="bg-purple-500 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-purple-600">Get started</div>
-                </div>
-                <div>
-                    <h3 className="text-xl font-semibold">4. Copy or Download</h3>
-                    <p className="text-gray-700">Copy the improved text or download it for later use.</p>
+                <div className="justify-items-center ">
+                    <h3 className="font-semibold">4. Copy or Download</h3>
+                    <p>Copy the improved text or download it for later use.</p>
+                    <div className="text-center mt-20">
+                        <div className="bg-purple-500 text-white w-60 py-2 rounded-lg text-lg hover:bg-purple-600">Get started</div>
+                    </div>
                 </div>
             </div>
-              
+            
         </section>
         <section id="faq" className="p-12 bg-blue-100">
             <h2 className="text-2xl font-bold text-center">Frequently Asked Questions</h2>
             <div className="mt-6 max-w-2xl mx-auto">
                 <details className="mb-4">
                     <summary className="font-semibold cursor-pointer">What is this tool and how does it work?</summary>
-                    <p className="text-gray-600 mt-2">Our tool analyzes Sinhala grammar and suggests corrections.</p>
+                    <p className="text-gray-600 mt-2 ml-10">Vyakarana is an AI powered Sinhala grammar checker and word suggestion tool. 
+                        It detects grammar mistakes, provides corrections, and offers alternative word suggestions. Simply paste, type or 
+                        upload your text and Vyakarana will analyze it to help improve your Sinhala writing.</p>
                 </details>
                 <details className="mb-4">
                     <summary className="font-semibold cursor-pointer">Is this tool free to use?</summary>
-                    <p className="text-gray-600 mt-2">Yes, it's completely free.</p>
+                    <p className="text-gray-600 mt-2 ml-10">Yes, Vyakarana offers free grammar checking and word suggestions. 
+                        However, we may introduce premium features in the future for advanced corrections and additional functionalities.</p>
                 </details>
                 <details className="mb-4">
                     <summary className="font-semibold cursor-pointer">Do I need to create an account to use this?</summary>
-                    <p className="text-gray-600 mt-2">Yes.</p>
+                    <p className="text-gray-600 mt-2 ml-10">No, you can use Vyakarana without creating an account. However, signing up may unlock additional features, such as saving corrections and giving feedback.</p>
                 </details>
                 <details className="mb-4">
-                    <summary className="font-semibold cursor-pointer">Does it highlight mistakes?</summary>
-                    <p className="text-gray-600 mt-2">Yes, it highlights mistakes and suggests corrections.</p>
+                    <summary className="font-semibold cursor-pointer">Is my data secure and private?</summary>
+                    <p className="text-gray-600 mt-2 ml-10">Yes, Vyakarana prioritizes user privacy and data security. We do not store or share any text that users input into the tool. All processing happens securely, 
+                        and we follow strict data protection policies to ensure your information remains private.</p>
                 </details>
             </div>
         </section>
-        <footer className="p-3 bg-purple-300 text-center flex justify-between items-center">
+        <footer className="p-5 bg-purple-300 text-center flex justify-between items-center">
             <div className="flex items-center">
-                <img src={Logo_img} alt="Logo" className="w-20 h-20" />
+                <img src={Logo_img} alt="Logo" className="ml-10 w-35 h-35" />
             </div>
             <div className="space-x-6">
                 <a href="#about" className="hover:text-white font-semibold">About</a>
-                <a href="#faq" className="hover:text-white font-semibold">Get Help</a>
+                <a href="#faq" className="hover:text-white font-semibold">Features</a>
+                <a href="#" className="hover:text-white font-semibold">About Us</a>
+                <a href="#" className="hover:text-white font-semibold">Get Help</a>
             </div>
-            <div className="space-x-20 flex">
-                <a href="https://www.facebook.com/profile.php?id=61573618317072" className="text-2xl">
-                    <img src={facebookIcon} alt="Facebook" className="w-6 h-6" />
-                </a>
-                <a href="https://www.instagram.com/vyakarana.site/" className="text-2xl">
-                    <img src={instagramIcon} alt="Instagram" className="w-6 h-6" />
-                </a>
-                <a href="https://www.linkedin.com/company/105934369/admin/dashboard/" className="text-2xl">
-                    <img src={linkedinIcon} alt="LinkedIn" className="w-6 h-6" />
-                </a>
+            <div  className="mr-10">
+                <div>
+                    <p className=" text-[36px] mb-5 font-Bold">Follow Us</p>             
+                    </div>
+                <div className="space-x-20 flex">
+                    <a href="https://www.facebook.com/profile.php?id=61573618317072" className="text-2xl">
+                        <img src={facebookIcon} alt="Facebook" className="w-10 h-10" />
+                    </a>
+                    <a href="https://www.instagram.com/vyakarana.site/" className="text-2xl">
+                        <img src={instagramIcon} alt="Instagram" className="w-10 h-10" />
+                    </a>
+                    <a href="https://www.linkedin.com/company/105934369/admin/dashboard/" className="text-2xl">
+                        <img src={linkedinIcon} alt="LinkedIn" className="w-10 h-10" />
+                    </a>
+                </div>
             </div>
         </footer>
     </div>
