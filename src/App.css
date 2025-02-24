@@ -1,1 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Grechen+Fuemen&family=Monomakh&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-f1: "Monomakh", serif; 
+  --font-f2: "Chewy", serif;
+}
