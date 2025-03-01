@@ -1,4 +1,9 @@
-import React from "react";
+import * as React from "react"
+import Autoplay from "embla-carousel-autoplay"
+
+import { motion } from "framer-motion";
+import { AuroraBackground } from "@/components/ui/aurora-background";
+ 
 import Logo_img from '../Pictures/logo.png';
 import Pic1 from '../Pictures/Pic_1.jpeg';
 import Pic2 from '../Pictures/Pic_2.jpg';
@@ -8,43 +13,107 @@ import Pic5 from '../Pictures/Pic_5.jpeg';
 import facebookIcon from "../Pictures/facebook_logo.png";
 import instagramIcon from "../Pictures/insta_logo.png";
 import linkedinIcon from "../Pictures/linkedin_logo.png";
+import BG1 from "../Pictures/BG_1.jpg";
+import BG2 from "../Pictures/BG_2.jpg";
+import BG3 from "../Pictures/BG_3.jpg";
+import BG4 from "../Pictures/BG_4.jpg";
+import BG5 from "../Pictures/BG_5.jpg";
+
+import BackgroundImage from "../Pictures/BG_10.jpg"
+
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 function marketing () {
+
+    const plugin = React.useRef(
+        Autoplay({ delay: 2000, stopOnInteraction: true })
+      )
+
+      const images = [
+        BG1,
+        BG2,
+        BG3,
+        BG4,
+        BG5,
+      ];  
+
     return(
-        <div className="bg-gray-100 min-h-screen font-sans">
+        <div className="bg-gray-100 min-h-screen">
             <nav className="bg-white shadow-md p-4 flex justify-between items-center border-b-2 border-blue-300">
-            <div className="text-xl font-bold flex items-center">
-                <img src={Logo_img} alt="Logo" className="w-10 h-10 mr-2" />
-            </div>
-            <div className="space-x-6">
-                <a href="#about" className="hover:text-blue-500 font-semibold">About</a>
-                <a href="#features" className="hover:text-blue-500 font-semibold">Features</a>
-                <a href="#faq" className="hover:text-blue-500 font-semibold">FAQ</a>
-                <a href="#reviews" className="hover:text-blue-500 font-semibold">Reviews</a>
-            </div>
-        </nav>
-        <section className="bg-gradient-to-r from-purple-300 to-blue-200 h-100 flex items-center justify-center px-10 mb-20">
-            <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                <div className="text-center md:text-left">
-                    <h1 className="text-5xl font-bold text-gray-900 leading-snug font-f1">
-                        Say Goodbye <span role="img" aria-label="wave">👋</span>
-                        <br /> to <span className="text-black">Grammar Mistakes!</span>
-                    </h1>
-                    <p className="mt-4 text-gray-700 text-lg leading-relaxed">
-                        Struggling with Sinhala grammar? Our advanced AI-powered tool helps you identify
-                        mistakes, understand corrections, and improve your writing effortlessly, whether
-                        for school, work, or everyday communication.
-                    </p>
+                <div className="text-xl font-bold flex items-center">
+                    <img src={Logo_img} alt="Logo" className="w-25 mr-2" />
                 </div>
-                <div className="flex justify-center mt-40">
-                    <img
-                        src={Pic1} 
-                        alt="Sinhala Grammar Checker"
-                        className="w-full md:w-[450px] rounded-lg shadow-xl border border-gray-200"
-                    />
+                <div className="space-x-6">
+                    <a href="#about" className="hover:text-blue-500 font-semibold">About</a>
+                    <a href="#features" className="hover:text-blue-500 font-semibold">Features</a>
+                    <a href="#faq" className="hover:text-blue-500 font-semibold">FAQ</a>
+                    <a href="#reviews" className="hover:text-blue-500 font-semibold">Reviews</a>
                 </div>
-            </div>
-        </section>
+            </nav>
+            <AuroraBackground className="h-full w-full">
+                <motion.div
+                    initial={{ opacity: 0.0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                        delay: 0.3,
+                        duration: 0.8,
+                        ease: "easeInOut",
+                    }}
+                    style={{
+                        backgroundImage: `url(${BackgroundImage})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                    }}
+                    className="relative flex flex-col gap-4  w-full"
+                >
+                    <section className="flex text-center p-10 gap-50 items-center justify-center">
+                        <div className="w-[40%]">
+                            <h1 className="text-5xl font-bold text-center font-f1">Say Goodbye <span role="img" aria-label="wave">👋</span> to <br /> Grammar Mistakes!</h1>
+                            <p className="mt-4 text-gray-200 max-w-2xl mx-auto">
+                                Struggling with Sinhala grammar? Our advanced AI-powered tool helps you identify mistakes, 
+                                understand corrections, and improve your writing effortlessly.
+                            </p>
+                        </div>
+                        <div className=" flex justify-center w-[40%] ">
+                            <Carousel
+                                plugins={[plugin.current]}
+                                onMouseEnter={plugin.current.stop}
+                                onMouseLeave={plugin.current.reset}
+                                
+                            >
+                                <CarouselContent>
+                                    {images.map((image, index) => (
+                                        <CarouselItem key={index}>
+                                            <div>
+                                                <Card>
+                                                    <CardContent className="flex items-center justify-center w-full h-full">
+                                                        <img
+                                                            src={image}
+                                                            alt={`Slide ${index + 1}`}
+                                                            className="rounded-lg "
+                                                        />
+                                                    </CardContent>
+                                                </Card>
+                                            </div>
+                                        </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                                <CarouselPrevious />
+                                <CarouselNext />
+                            </Carousel>
+                        </div>
+                    </section>
+                </motion.div>
+            </AuroraBackground>
+        
         <section id="features" className="p-12 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-6 shadow-md rounded-lg">
                 <h2 className="text-xl font-bold font-f2">Correcting Grammatical Errors</h2>
@@ -116,7 +185,7 @@ function marketing () {
         </section>
         <footer className="p-5 bg-purple-300 text-center flex justify-between items-center">
             <div className="flex items-center">
-                <img src={Logo_img} alt="Logo" className="ml-10 w-35 h-35" />
+                <img src={Logo_img} alt="Logo" className="ml-10 w-35" />
             </div>
             <div className="space-x-6">
                 <a href="#about" className="hover:text-white font-semibold">About</a>
