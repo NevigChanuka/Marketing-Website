@@ -46,17 +46,39 @@ function marketing () {
 
     return(
         <div className="bg-gray-100 min-h-screen">
-            <nav className="bg-white shadow-md p-4 flex justify-between items-center border-b-2 border-blue-300">
-                <div className="text-xl font-bold flex items-center">
-                    <img src={Logo_img} alt="Logo" className="w-25 mr-2" />
-                </div>
-                <div className="space-x-6">
-                    <a href="#about" className="hover:text-blue-500 font-semibold">About</a>
-                    <a href="#features" className="hover:text-blue-500 font-semibold">Features</a>
-                    <a href="#faq" className="hover:text-blue-500 font-semibold">FAQ</a>
-                    <a href="#reviews" className="hover:text-blue-500 font-semibold">Reviews</a>
+            <nav class="bg-white w-full z-20">
+                <div class=" flex items-center justify-between  p-4">
+                    <a href="h" class="flex items-center space-x-3">
+                        <img src={Logo_img} class="h-10" alt="Logo" />
+                    </a>
+                    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center">Get started</button>
+                        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                                </svg>
+                        </button>
+                    </div>
+                    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white">
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+                            </li>
+                            <li>
+                                <a href="#features" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ">Features</a>
+                            </li>
+                            <li>
+                                <a href="#faq" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
+
             <AuroraBackground className="h-full w-full">
                 <motion.div
                     initial={{ opacity: 0.0, y: 40 }}
@@ -72,17 +94,17 @@ function marketing () {
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
                     }}
-                    className="relative flex flex-col gap-4  w-full"
+                    className="relative flex flex-col gap-4 w-full px-4 md:px-10"
                 >
-                    <section className="flex text-center p-10 gap-50 items-center justify-center">
-                        <div className="w-[40%]">
-                            <h1 className="text-5xl font-bold text-center font-f1">Say Goodbye <span role="img" aria-label="wave">👋</span> to <br /> Grammar Mistakes!</h1>
-                            <p className="mt-4 text-gray-200 max-w-2xl mx-auto">
+                    <section className="flex flex-col md:flex-row text-center md:text-left items-center justify-center p-6 md:p-10 gap-10 md:gap-16">
+                        <div className="md:w-[50%] lg:w-[40%">
+                            <h1 className="text-[clamp(28px,4vw,50px)] font-bold font-f1">Say Goodbye <span role="img" aria-label="wave">👋</span> to <br /> Grammar Mistakes!</h1>
+                            <p className="mt-4 text-gray-200 text-[clamp(10px,4vw,20px)]">
                                 Struggling with Sinhala grammar? Our advanced AI-powered tool helps you identify mistakes, 
                                 understand corrections, and improve your writing effortlessly.
                             </p>
                         </div>
-                        <div className=" flex justify-center w-[40%] ">
+                        <div className="flex justify-center md:w-[50%] lg:w-[40%] p-4">
                             <Carousel
                                 plugins={[plugin.current]}
                                 onMouseEnter={plugin.current.stop}
@@ -91,14 +113,14 @@ function marketing () {
                             >
                                 <CarouselContent>
                                     {images.map((image, index) => (
-                                        <CarouselItem key={index}>
+                                        <CarouselItem key={index}  className="flex justify-center">
                                             <div>
                                                 <Card>
                                                     <CardContent className="flex items-center justify-center w-full h-full">
                                                         <img
                                                             src={image}
                                                             alt={`Slide ${index + 1}`}
-                                                            className="rounded-lg "
+                                                            className="max-w-full h-auto object-cover"
                                                         />
                                                     </CardContent>
                                                 </Card>
@@ -183,7 +205,7 @@ function marketing () {
                 </details>
             </div>
         </section>
-        <footer className="p-5 bg-purple-300 text-center flex justify-between items-center">
+        <footer id="contact" className="p-5 bg-purple-300 text-center flex justify-between items-center">
             <div className="flex items-center">
                 <img src={Logo_img} alt="Logo" className="ml-10 w-35" />
             </div>
