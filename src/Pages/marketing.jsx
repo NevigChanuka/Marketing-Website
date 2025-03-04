@@ -3,6 +3,7 @@ import Autoplay from "embla-carousel-autoplay"
 
 import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/aurora-background";
+import { Footer } from "@/components/ui/footer-section";
  
 import Logo_img from '../Pictures/logo.png';
 import Pic1 from '../Pictures/Pic_1.jpeg';
@@ -10,9 +11,7 @@ import Pic2 from '../Pictures/Pic_2.jpg';
 import Pic3 from '../Pictures/Pic_3.jpg';
 import Pic4 from '../Pictures/Pic_4.jpeg';
 import Pic5 from '../Pictures/Pic_5.jpeg';
-import facebookIcon from "../Pictures/facebook_logo.png";
-import instagramIcon from "../Pictures/insta_logo.png";
-import linkedinIcon from "../Pictures/linkedin_logo.png";
+
 import BG1 from "../Pictures/BG_1.jpg";
 import BG2 from "../Pictures/BG_2.jpg";
 import BG3 from "../Pictures/BG_3.jpg";
@@ -205,33 +204,7 @@ function marketing () {
                 </details>
             </div>
         </section>
-        <footer id="contact" className="p-5 bg-purple-300 text-center flex justify-between items-center">
-            <div className="flex items-center">
-                <img src={Logo_img} alt="Logo" className="ml-10 w-35" />
-            </div>
-            <div className="space-x-6">
-                <a href="#about" className="hover:text-white font-semibold">About</a>
-                <a href="#faq" className="hover:text-white font-semibold">Features</a>
-                <a href="#" className="hover:text-white font-semibold">About Us</a>
-                <a href="#" className="hover:text-white font-semibold">Get Help</a>
-            </div>
-            <div  className="mr-10">
-                <div>
-                    <p className=" text-[36px] mb-5 font-Bold">Follow Us</p>             
-                    </div>
-                <div className="space-x-20 flex">
-                    <a href="https://www.facebook.com/profile.php?id=61573618317072" className="text-2xl">
-                        <img src={facebookIcon} alt="Facebook" className="w-10 h-10" />
-                    </a>
-                    <a href="https://www.instagram.com/vyakarana.site/" className="text-2xl">
-                        <img src={instagramIcon} alt="Instagram" className="w-10 h-10" />
-                    </a>
-                    <a href="https://www.linkedin.com/company/105934369/admin/dashboard/" className="text-2xl">
-                        <img src={linkedinIcon} alt="LinkedIn" className="w-10 h-10" />
-                    </a>
-                </div>
-            </div>
-        </footer>
+        <Footer />
     </div>
     );
 }
