@@ -25,8 +25,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel"
 
 function marketing () {
@@ -103,7 +101,7 @@ function marketing () {
                                 understand corrections, and improve your writing effortlessly.
                             </p>
                         </div>
-                        <div className="flex justify-center md:w-[50%] lg:w-[40%] p-4">
+                        <div className="flex justify-center sm:w-[80%] md:w-[70%] lg:w-[50%] p-4">
                             <Carousel
                                 plugins={[plugin.current]}
                                 onMouseEnter={plugin.current.stop}
@@ -127,8 +125,6 @@ function marketing () {
                                         </CarouselItem>
                                     ))}
                                 </CarouselContent>
-                                <CarouselPrevious />
-                                <CarouselNext />
                             </Carousel>
                         </div>
                     </section>
@@ -136,14 +132,14 @@ function marketing () {
             </AuroraBackground>
         
         <section id="features" className="p-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 shadow-md rounded-lg">
+            <div className="bg-white p-6 shadow-xl rounded-lg">
                 <h2 className="text-xl font-bold font-f2">Correcting Grammatical Errors</h2>
                 <p className="mt-2 text-gray-600">
                     Automatically detects and corrects grammatical mistakes in Sinhala text. Highlights errors and provides suggestions for improvement.
                 </p>
                 <img src={Pic2} alt="Correction" className="mt-4 ml- w-32 " />
             </div>
-            <div className="bg-white p-6 shadow-md rounded-lg">
+            <div className="bg-white p-6 shadow-xl rounded-lg">
                 <h2 className="text-xl font-bold font-f2">Suggest Similar Words</h2>
                 <p className="mt-2 text-gray-600">
                     Provides alternative words with similar meanings to enhance vocabulary. Helps refine writing by suggesting more suitable words.
@@ -179,30 +175,32 @@ function marketing () {
             </div>
             
         </section>
-        <section id="faq" className="p-12 bg-blue-100">
-            <h2 className="text-2xl font-bold text-center">Frequently Asked Questions</h2>
-            <div className="mt-6 max-w-2xl mx-auto">
-                <details className="mb-4">
-                    <summary className="font-semibold cursor-pointer">What is this tool and how does it work?</summary>
-                    <p className="text-gray-600 mt-2 ml-10">Vyakarana is an AI powered Sinhala grammar checker and word suggestion tool. 
+        <section id="faq" className="p-5">
+        <div className="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
+		        <h2 className="text-2xl font-semibold sm:text-4xl text-center p-10">Frequently Asked Questions</h2>
+		        <div>
+			        <details className="w-full border shadow-xl rounded-lg m-5 pl-5 pr-5">
+				        <summary className=" py-4">What is this tool and how does it work?</summary>
+				        <p className="px-4 py-6 pt-0 ml-4 -mt-4">Vyakarana is an AI powered Sinhala grammar checker and word suggestion tool. 
                         It detects grammar mistakes, provides corrections, and offers alternative word suggestions. Simply paste, type or 
-                        upload your text and Vyakarana will analyze it to help improve your Sinhala writing.</p>
-                </details>
-                <details className="mb-4">
-                    <summary className="font-semibold cursor-pointer">Is this tool free to use?</summary>
-                    <p className="text-gray-600 mt-2 ml-10">Yes, Vyakarana offers free grammar checking and word suggestions. 
-                        However, we may introduce premium features in the future for advanced corrections and additional functionalities.</p>
-                </details>
-                <details className="mb-4">
-                    <summary className="font-semibold cursor-pointer">Do I need to create an account to use this?</summary>
-                    <p className="text-gray-600 mt-2 ml-10">No, you can use Vyakarana without creating an account. However, signing up may unlock additional features, such as saving corrections and giving feedback.</p>
-                </details>
-                <details className="mb-4">
-                    <summary className="font-semibold cursor-pointer">Is my data secure and private?</summary>
-                    <p className="text-gray-600 mt-2 ml-10">Yes, Vyakarana prioritizes user privacy and data security. We do not store or share any text that users input into the tool. All processing happens securely, 
-                        and we follow strict data protection policies to ensure your information remains private.</p>
-                </details>
-            </div>
+                        upload your text and Vyakarana will analyze it to help improve your Sinhala writing. </p>
+			        </details>
+			        <details className="w-full border shadow-xl rounded-lg m-5 pl-5 pr-5">
+				        <summary className="py-6">Is this tool free to use?</summary>
+				        <p className="px-4 py-6 pt-0 ml-4 -mt-4">Yes, <br/>Vyakarana offers free grammar checking and word suggestions. 
+                        However, we may introduce premium features in the future for advanced corrections and additional functionalities. </p>
+			        </details>
+			        <details className="w-full border shadow-xl rounded-lg m-5 pl-5 pr-5">
+				        <summary className="py-6">Do I need to create an account to use this?</summary>
+				        <p className="px-4 py-6 pt-0 ml-4 -mt-4">No, <br/>you can use Vyakarana without creating an account. However, signing up may unlock additional features, such as saving corrections and giving feedback. </p>
+			        </details>
+                    <details className="w-full border shadow-xl rounded-lg m-5 pl-5 pr-5">
+				        <summary className="py-6">Is my data secure and private?</summary>
+				        <p className="px-4 py-6 pt-0 ml-4 -mt-4">Yes, <br/>Vyakarana prioritizes user privacy and data security. We do not store or share any text that users input into the tool. All processing happens securely, 
+                        and we follow strict data protection policies to ensure your information remains private. </p>
+			        </details>
+		        </div>
+	        </div>
         </section>
         <Footer />
     </div>
